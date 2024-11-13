@@ -1,0 +1,179 @@
+.precos {
+  width: 100%;
+  min-height: 1028px;
+  display: flex;
+  justify-content: center;
+  background: url(../assets/images/back-2.png) no-repeat center bottom;
+  background-color: var(--gray-100);
+}
+
+#nossos_precos {
+  margin-top: 0;
+}
+
+.precos_topo {
+  text-align: center;
+}
+
+.precos_topo .titulo_coluna::after {
+  margin: 1rem auto 0;
+}
+
+.tabela_precos {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 25px 5px rgba(12, 12, 12, 0.1);
+}
+
+.sessao_preco {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: var(--font-text);
+  background-color: var(--white);
+}
+
+.sessao_preco_lista {
+  width: 100%;
+  list-style: none;
+}
+
+.sessao_preco_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+  color: var(--gray-800);
+  cursor: default;
+}
+
+.sessao_preco_divisoria {
+  height: 1px;
+  flex-grow: 1;
+  border-bottom: 1px dashed var(--orange-500);
+}
+
+.sessao_preco_botao {
+  align-self: flex-end;
+}
+
+.produto_barbeiro_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contagem_barbearia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.contagem_barbearia:not(:last-child){
+  border-right: 1px solid var(--gray-600);
+}
+
+.total_numeros {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--orange-500);
+}
+
+.titulo_categoria {
+  font-family: var(--font-text);
+  color: var(--gray-400);
+}
+
+@media screen and (min-width: 320px) {
+  .precos {
+    padding: 2rem 0;
+  }
+
+  .tabela_precos {
+    flex-direction: column;
+  }
+
+  .sessao_preco, 
+  .precos_imagens {
+    width: 100%;
+  }
+
+  .sessao_preco {
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .sessao_preco_item {
+    font-size: 1rem;
+  }
+
+  .produto_barbeiro_container {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .total_numeros {
+    font-size: 2rem;
+  }
+
+  .titulo_categoria {
+    font-size: .875rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .sessao_preco {
+    padding: 2.5rem;
+  }
+
+  .total_numeros {
+    font-size: 3rem;
+  }
+
+  .titulo_categoria {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .precos {
+    padding: 3rem 0;
+  }
+
+  .sessao_preco_item {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .produto_barbeiro_container {
+    margin-top: 3rem;
+  }
+
+  .total_numeros {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .precos {
+    padding: 5.6rem 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tabela_precos, 
+  .produto_barbeiro_container {
+    width: calc(560px * 2);
+  }
+  
+  .tabela_precos {
+    flex-direction: row;
+  }
+
+  .sessao_preco, .precos_imagens {
+    width: 50%;
+  }
+}

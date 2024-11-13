@@ -1,0 +1,9 @@
+1 - Instalar o EmailJS usando o Node.js com o comando:
+npm install --save @emailjs/browser
+
+2 - Parametros do EmailJS
+    A - No index.html colocar a publickey no script: (publicKey:)
+    B - No popup.js colocar o service_id e o template_id: (emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams))
+
+3 - Parametro do Whatsapp
+Em popup.js mudar o link da constante: (const whatsappLink)

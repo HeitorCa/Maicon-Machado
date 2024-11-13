@@ -1,0 +1,170 @@
+.servicos,
+.servicos {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1028px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: var(--gray-800);
+}
+
+.servicos_titulo {
+  color: var(--white);
+}
+
+.servicos_principal_descricao, 
+.servicos_item_descricao {
+  font-family: var(--font-text);
+  color: var(--gray-400);
+}
+
+.servicos_principal_descricao {
+  margin-bottom: 2rem;
+}
+
+.servicos_lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.servicos_item {
+  list-style-type: none;
+}
+
+.servicos_item_icone {
+  width: 44px;
+}
+
+.servicos_item:last-child .servicos_item_icone {
+  position: relative;
+  left: -12px;
+}
+
+.servicos_item_titulo {
+  color: var(--white);
+  margin: 1rem 0;
+  letter-spacing: 1.5px;
+  font-family: var(--font-heading);
+}
+
+@media screen and (min-width: 320px) {
+  .servicos {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-image: none;
+  }
+
+  .servicos_principal, 
+  .servicos_conteudo {
+    width: 100%;
+  }
+
+  .servicos_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicos_principal .titulo_coluna::after {
+    margin: 1rem auto 0;
+  }
+
+  .servicos_principal_descricao {
+    max-width: 524px;
+    text-align: center;
+  }
+
+  .servicos_conteudo {
+    margin-top: 2rem;
+  }
+
+  .servicos_lista {
+    justify-content: center;
+  }
+
+  .servicos_item_titulo {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .servicos {
+    min-height: 0;
+    padding: 3rem 1rem;
+  }
+
+  .servicos_conteudo {
+    margin-top: 3rem;
+  }
+
+  .servicos_lista {
+    gap: 2rem;
+  }
+
+  .servicos_item {
+    max-width: calc((100% / 2) - 1rem);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .servicos {
+    padding: 4rem 3rem;
+  }
+
+  .servicos_lista {
+    gap: 2.5rem;
+  }
+
+  .servicos_item {
+    max-width: calc((100% / 2) - 2rem);
+  }
+
+  .servicos_item_titulo {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .servicos {
+    min-height: 1028px;
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .servicos {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 6rem 1.5rem;
+    background-image: url(../assets/images/fundo\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .servicos_principal {
+    width: 30%;
+    align-items: flex-start;
+  }
+
+  .servicos_principal .titulo_coluna::after {
+    margin: 1rem 0 0;
+  }
+
+  .servicos_principal_descricao {
+    max-width: 370px;
+    text-align: start;
+  }
+
+
+  .servicos_conteudo {
+    width: calc((340px * 2) + 2.5rem);
+    margin-top: 0;
+  }
+
+  .servicos_item_descricao {
+    max-width: 340px;
+  }
+}

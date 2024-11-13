@@ -1,0 +1,151 @@
+.agendamento {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 0;
+  background-color: var(--gray-100);
+  box-sizing: border-box; 
+}
+
+.titulo_coluna {
+  margin-top: 70px;
+}
+
+.agendamento .titulo_coluna::after {
+  margin: 1rem auto 0;
+}
+
+.agendamento_formulario {
+  display: flex;
+  width: 100%;
+  max-width: 400px; 
+  flex-direction: column;
+}
+
+.formulario_campo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#enviar_botao {
+  margin-top: 1rem;
+}
+
+.agendamento_input,
+.agendamento_textarea {
+  width: 100%; 
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.agendamento_textarea {
+  resize: none;
+}
+
+.agendamento_input::placeholder,
+.agendamento_textarea::placeholder {
+  opacity: 0;
+}
+
+.agendamento_label {
+  position: absolute;
+  pointer-events: none;
+  left: 16px;
+  top: 16px;
+  transition: 0.2s ease-in-out all;
+}
+
+.agendamento_input:not(:placeholder-shown) ~ .agendamento_label,
+.agendamento_textarea:not(:placeholder-shown) ~ .agendamento_label,
+.agendamento_input:focus ~ .agendamento_label,
+.agendamento_textarea:focus ~ .agendamento_label {
+  top: -10px;
+  padding: 0 4px;
+  background-color: var(--gray-100);
+}
+
+.agendamento_input:not(:placeholder-shown, :focus) ~ .agendamento_label,
+.agendamento_textarea:not(:placeholder-shown, :focus) ~ .agendamento_label {
+  font-size: .875rem;
+  color: var(--gray-600);
+}
+
+.agendamento_fieldset_legend,
+.agendamento_tipo {
+  color: var(--gray-600);
+}
+
+.agendamento_fieldset_legend {
+  margin-bottom: 1rem;
+}
+
+.agendamento_tipo {
+  cursor: pointer;
+}
+
+.agendamento_tipo.checkbox {
+  margin: 2rem 0;
+}
+
+.agendamento_formulario_botao {
+  margin-bottom: 1.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.horario_funcionamento {
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: .875rem;
+  color: var(--gray-600);
+}
+
+@media screen and (max-width: 320px) {
+  .agendamento {
+    padding: 1.5rem 1rem;
+  }
+
+  .agendamento_formulario {
+    width: 100%;
+    padding: 0 10px; 
+  }
+
+  .agendamento_input, 
+  .agendamento_textarea {
+    width: 100%; 
+  }  
+}
+
+@media screen and (min-width: 320px) and (max-width: 560px) {
+  .agendamento {
+    padding: 2rem 1rem;
+  }
+
+  .agendamento_formulario {
+    width: 90%;
+  }
+
+  .agendamento_input, 
+  .agendamento_textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .agendamento {
+    padding: 3rem 0;
+  }
+
+  .agendamento_formulario {
+    width: 80%; 
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .agendamento {
+    padding: 6rem 0;
+  }
+}
